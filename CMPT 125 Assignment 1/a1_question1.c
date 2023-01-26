@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "a1_question1.h"
 
 unsigned int insert_digit(unsigned int digit, unsigned int number) {
@@ -6,23 +5,22 @@ unsigned int insert_digit(unsigned int digit, unsigned int number) {
     int endRes = 0;
     int multiplyer = 1;
 
-    // while loop
+    // while loop to add numbers for final end result 
     while (number>0) {
-        // multiply the digit by the multiplyer value
-        int digit = digit * multiplyer;
-        // add the digit to the result
-        int endRes = endRes + digit;
+        // add the digit to the end result (end result is initially 0)
+        endRes = endRes + digit*multiplyer;
         // multiplyer is multiplied by 10 each time
-        int multiplyer = multiplyer*10;
-        // end result is an addition
-        int endRes = endRes + ((number%10)*multiplyer);
+        multiplyer = multiplyer*10;
+        // end result is an accumulated and constantly updated variable
+        endRes = endRes + ((number%10)*multiplyer);
         // update the number
         number = number/10;
         // update the multiplyer
         multiplyer = multiplyer*10;
     }
+    endRes = endRes + digit*multiplyer;
     return endRes;
-}
+} 
 
 // // find the length of number
 // int numLen = 0;
