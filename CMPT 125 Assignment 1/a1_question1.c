@@ -18,9 +18,11 @@ unsigned int insert_digit(unsigned int digit, unsigned int number) {
         // update the multiplyer
         multiplyer = multiplyer*10;
     }
-    endRes = endRes + digit*multiplyer;
+    // digit*multiplyer
+    int digitmultiplyer = digit*multiplyer;
+    endRes = endRes + digitmultiplyer;
     return endRes;
-} 
+}  
 
 // // find the length of number
 // int numLen = 0;
