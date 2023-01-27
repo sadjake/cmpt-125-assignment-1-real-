@@ -3,26 +3,26 @@
 unsigned int insert_digit(unsigned int digit, unsigned int number) {
     // initialize values for the end result and the multiplyer
     int endRes = 0;
-    int multiplyer = 1;
+    int multiplier = 1;
 
     // while loop to add numbers for final end result 
     while (number>0) {
         // add the digit to the end result (end result is initially 0)
-        endRes = endRes + digit*multiplyer;
+        endRes = endRes + digit*multiplier;
         // multiplyer is multiplied by 10 each time
-        multiplyer = multiplyer*10;
+        multiplier = multiplier*10;
         // end result is an accumulated and constantly updated variable
-        endRes = endRes + ((number%10)*multiplyer);
+        endRes = endRes + ((number%10)*multiplier);
         // update the number
         number = number/10;
         // update the multiplyer
-        multiplyer = multiplyer*10;
+        multiplier = multiplier*10;
     }
     // digit*multiplyer
-    int digitmultiplyer = digit*multiplyer;
-    endRes = endRes + digitmultiplyer;
+    int digitmultiplier = digit*multiplier;
+    endRes = endRes + digitmultiplier;
     return endRes;
-}  
+} 
 
 // // find the length of number
 // int numLen = 0;
