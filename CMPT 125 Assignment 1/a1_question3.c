@@ -12,14 +12,16 @@ float calculateAreaShoelace(unsigned int rows, int points[][2], int index) {
 
     // for loop
     for (int i=0; i<rows; i++) {
-        // set conditions to multiply x and ys
+        // set conditions to multiply x and ys in shoelace way
         if (i==index) { 
             indexmatch += 1;
             }
 
         else {
+            // row-1
             if (i==rows-1) {
                 if(index == 0) {
+                    // x1 times y2
                     s1 += (points[i][0]*points[1][1]);
                 }
 
@@ -37,7 +39,7 @@ float calculateAreaShoelace(unsigned int rows, int points[][2], int index) {
         }      
     }
         for (int i=0; i<rows; i++) {
-        // 
+        // set conditions to multiply x and ys in shoelace way
         if (i==index) { 
             indexmatch += 1;
             }
@@ -52,12 +54,13 @@ float calculateAreaShoelace(unsigned int rows, int points[][2], int index) {
             if (i+1 == index){
                 s2 += (points[i][1]*points[i][0]);
             }
-            //
+            // 
             else {
                 s2 += (points[i][1]*points[i+1][0]);
             }
         }     
         }
+        // calculation of the area
         area = 0.5* fabs(s1-s2);
         return area;
     }
