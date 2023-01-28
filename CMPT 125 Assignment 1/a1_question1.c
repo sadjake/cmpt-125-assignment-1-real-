@@ -1,3 +1,7 @@
+// Jake Choi
+// 301552446
+// jyc50
+
 #include "a1_question1.h"
 
 unsigned int insert_digit(unsigned int digit, unsigned int number) {
