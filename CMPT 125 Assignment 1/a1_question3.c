@@ -1,3 +1,7 @@
+// Jake Choi
+// 301552446
+// jyc50
+
 #include "a1_question3.h"
 
 float calculateAreaShoelace(unsigned int rows, int points[][2], int index) {
