@@ -1,6 +1,3 @@
-#include <math.h>
-#include <stdbool.h>
-#include <stdio.h>
 #include "a1_question3.h"
 
 float calculateAreaShoelace(unsigned int rows, int points[][2], int index) {
